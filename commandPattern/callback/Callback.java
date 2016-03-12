@@ -17,5 +17,5 @@ public interface Callback extends Remote {
 	  * @param pi Ergebnis der Rechnung
 	  * @throws RemoteException
 	  */
-	void receivePi(BigDecimal pi) throws RemoteException;
+	BigDecimal receivePi(BigDecimal pi) throws RemoteException;
 }
