@@ -2,7 +2,7 @@ package server.commands;
 
 import java.io.Serializable;
 
-public interface Command extends Serializable {
+public interface Command<T> extends Serializable {
 
-	public void execute();
+	void execute();
 }

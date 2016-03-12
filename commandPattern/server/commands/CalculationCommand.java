@@ -1,7 +1,9 @@
 package server.commands;
 
 import java.io.Serializable;
+
 import calculation.Calculation;
+import calculation.PICalc;
 
 public class CalculationCommand implements Command, Serializable {
 
@@ -11,6 +13,7 @@ public class CalculationCommand implements Command, Serializable {
 	@Override
 	public void execute() {
 		System.out.println("CalculationCommand called!");
+		calc = new PICalc();
 		calc.calculate();
 		calc.getResult();
 	}
