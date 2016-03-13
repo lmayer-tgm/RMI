@@ -6,10 +6,15 @@ import java.rmi.registry.Registry;
 import java.rmi.server.UnicastRemoteObject;
 
 import remoteService.DoSomethingService;
-
+/**
+ * rechnet die Aufgabe eines Clients und schickt das Ergebnis über einen Callback zurück
+ * @author lmayer
+ * @verison 12032016
+ *  */
 public class Server {
 
 	/**
+	 * 
 	 * @param args
 	 */
 	public static void main(String[] args) {
@@ -17,9 +22,11 @@ public class Server {
 		if (System.getSecurityManager() == null) {
 			System.setSecurityManager(new SecurityManager());
 		}
-		try {
+		try{
+			//erstellen des remote objekts und exportieren in die RMIRuntime 
 			ServerService uRemoteObject = new ServerService();
 			DoSomethingService stub = (DoSomethingService) UnicastRemoteObject.exportObject(uRemoteObject, 0);
+			//Neue Registry und binden des Objekts
 			Registry registry = LocateRegistry.createRegistry(1234);
 			registry.rebind("Service", stub);
 			System.out.println("Service bound! Press Enter to terminate ...");
