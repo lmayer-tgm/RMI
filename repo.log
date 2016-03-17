@@ -1,0 +1,106 @@
+commit 167e2b6bab4be2be7420ac888f97e13b0e56b512
+Author: Lukas Mayer <lmayer@student.tgm.ac.at>
+Date:   Mon Mar 14 14:14:28 2016 +0100
+
+    documented command interface
+
+ commandPattern/server/commands/Command.java | 6 ++++++
+ 1 file changed, 6 insertions(+)
+
+commit 68715a623e7473c96989bc2ef4d67b5623fcf894
+Author: Lukas Mayer <lmayer@student.tgm.ac.at>
+Date:   Sun Mar 13 12:17:10 2016 +0100
+
+    implemented callback in client
+
+ commandPattern/client/Client.java | 27 ++++++++++++++++++++++++++-
+ commandPattern/server/Server.java | 11 +++++++++--
+ 2 files changed, 35 insertions(+), 3 deletions(-)
+
+commit 77a6457553c0880781fa083652b591186e6d6533
+Author: Lukas Mayer <lmayer@student.tgm.ac.at>
+Date:   Sat Mar 12 20:15:24 2016 +0100
+
+    edited generic type in command interface
+
+ commandPattern/server/ServerService.java               | 8 ++++++++
+ commandPattern/server/commands/CalculationCommand.java | 3 +++
+ commandPattern/server/commands/Command.java            | 4 ++--
+ 3 files changed, 13 insertions(+), 2 deletions(-)
+
+commit e688d3a2f896980062273c8d1ae17a9686086add
+Author: Lukas Mayer <lmayer@student.tgm.ac.at>
+Date:   Sat Mar 12 20:11:41 2016 +0100
+
+    modified callback interface and remote interface
+
+ commandPattern/callback/Callback.java                |  2 +-
+ commandPattern/remoteService/DoSomethingService.java | 11 +++++++++++
+ 2 files changed, 12 insertions(+), 1 deletion(-)
+
+commit 1117d1ff05400ec89c4f729c85a74c3d3d2c1362
+Author: Lukas Mayer <lmayer@student.tgm.ac.at>
+Date:   Sat Mar 12 20:07:13 2016 +0100
+
+    added implemented callback class and pi calculation class
+
+ commandPattern/client/CallbackPi.java  |  27 +++++++
+ commandPattern/server/commands/Pi.java | 133 +++++++++++++++++++++++++++++++++
+ 2 files changed, 160 insertions(+)
+
+commit fa5634c2edb1be090981201986ac3e80b9b44158
+Author: Lukas Mayer <lmayer@student.tgm.ac.at>
+Date:   Sat Mar 12 19:21:07 2016 +0100
+
+    added callback interface
+
+ commandPattern/callback/Callback.java | 21 +++++++++++++++++++++
+ 1 file changed, 21 insertions(+)
+
+commit 73372317875c3ef85944682805ee62c0c9026355
+Author: Lukas Mayer <lmayer@student.tgm.ac.at>
+Date:   Sat Mar 12 17:44:53 2016 +0100
+
+    added initial commandpattern program
+
+ commandPattern/calculation/Calculation.java        |  7 ++++
+ commandPattern/calculation/PICalc.java             | 16 ++++++++
+ commandPattern/client/Client.java                  | 38 +++++++++++++++++++
+ .../remoteService/DoSomethingService.java          | 12 ++++++
+ commandPattern/server/Server.java                  | 44 ++++++++++++++++++++++
+ commandPattern/server/ServerService.java           | 14 +++++++
+ .../server/commands/CalculationCommand.java        | 17 +++++++++
+ commandPattern/server/commands/Command.java        |  8 ++++
+ commandPattern/server/commands/LoginCommand.java   | 13 +++++++
+ .../server/commands/RegisterCommand.java           | 13 +++++++
+ 10 files changed, 182 insertions(+)
+
+commit dad0f33a91adb518cbdc0a3bda260a7bcd3b3ad4
+Merge: af1a730 1f3b9cc
+Author: Lukas Mayer <lmayer@student.tgm.ac.at>
+Date:   Sat Mar 12 16:09:51 2016 +0100
+
+    Merge https://github.com/lmayer-tgm/RMI
+
+commit 1f3b9cc9b0c8e236fbdb80798221a3990c16bcb3
+Author: Lukas Mayer <lmayer@student.tgm.ac.at>
+Date:   Sat Mar 12 16:09:01 2016 +0100
+
+    Initial commit
+
+ README.md | 1 +
+ 1 file changed, 1 insertion(+)
+
+commit af1a730b57c2707de57878468acb759d54076875
+Author: Lukas Mayer <lmayer@student.tgm.ac.at>
+Date:   Sat Mar 12 16:01:30 2016 +0100
+
+    added tutorial files (working)
+
+ .gitignore                         |   1 +
+ tutorial/client/ComputePi.java     |  56 +++++++++++++++++
+ tutorial/client/Pi.java            | 126 +++++++++++++++++++++++++++++++++++++
+ tutorial/compute/Compute.java      |  39 ++++++++++++
+ tutorial/compute/Task.java         |  36 +++++++++++
+ tutorial/engine/ComputeEngine.java |  67 ++++++++++++++++++++
+ 6 files changed, 325 insertions(+)
